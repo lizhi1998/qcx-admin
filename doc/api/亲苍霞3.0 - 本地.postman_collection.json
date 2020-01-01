@@ -1,0 +1,2829 @@
+{
+	"info": {
+		"_postman_id": "dfe928a3-ec14-487e-a5cb-8e8e5de0876f",
+		"name": "亲苍霞3.0 - 本地",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "账户",
+			"item": [
+				{
+					"name": "登录 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "root",
+									"description": "账户",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "密码",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "19921971",
+									"description": "账户",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "密码",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "account",
+									"value": "stu_test_2",
+									"description": "账户",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "密码",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/user/login",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "返回值为身份"
+					},
+					"response": []
+				},
+				{
+					"name": "注销 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/user/logout",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"logout"
+							]
+						},
+						"description": "返回值为身份"
+					},
+					"response": []
+				},
+				{
+					"name": "获取身份信息 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/user/getInfo",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getInfo"
+							]
+						},
+						"description": "返回值为身份"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员",
+			"item": [
+				{
+					"name": "添加 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test4",
+									"description": "账号",
+									"type": "text"
+								},
+								{
+									"key": "masName",
+									"value": "测试4",
+									"description": "姓名",
+									"type": "text"
+								},
+								{
+									"key": "masInstitution",
+									"value": "管理学院",
+									"description": "机构（学院名/校级）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/master/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"master",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/master/addByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"master",
+								"addByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test3",
+									"description": "被删除的管理员账号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/master/delete",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"master",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改密码 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"description": "账号",
+									"type": "text"
+								},
+								{
+									"key": "oldPassword",
+									"value": "123456789",
+									"description": "原密码",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "123456",
+									"description": "新密码",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/master/alterPassword",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"master",
+								"alterPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "queryString",
+									"value": "",
+									"description": "查询内容（账号或姓名，需要对应查询方式）",
+									"type": "text"
+								},
+								{
+									"key": "queryType",
+									"value": "all",
+									"description": "查询方式，masAccount, masName, masInstitution, all",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/master/query",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"master",
+								"query"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "学生",
+			"item": [
+				{
+					"name": "重置密码（暂时废弃）",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "",
+									"description": "重置密码的学生学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/resetPassword",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "queryString",
+									"value": "class1",
+									"description": "查询的内容",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "queryType",
+									"value": "stuClass",
+									"description": "查询的类型(stuId, stuName, stuDorm, stuClass)，其中stuName支持模糊匹配",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "stuId",
+									"value": "3161911116",
+									"description": "对应：stuId",
+									"type": "text"
+								},
+								{
+									"key": "stuName",
+									"value": "陈志明",
+									"description": "对应：stuName",
+									"type": "text"
+								},
+								{
+									"key": "dorm",
+									"value": "c3-403",
+									"description": "对应：stuDorm",
+									"type": "text"
+								},
+								{
+									"key": "academic",
+									"value": "信息科学与工程学院",
+									"description": "对应：stuClass",
+									"type": "text"
+								},
+								{
+									"key": "major",
+									"value": "计算机科学与技术",
+									"description": "对应：stuClass",
+									"type": "text"
+								},
+								{
+									"key": "className",
+									"value": "计算机1601",
+									"description": "对应：stuClass",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "stuId",
+									"description": "查询方式：stuId, stuName, stuDorm, stuClass",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/query",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "stuName",
+									"value": "学测2",
+									"description": "姓名",
+									"type": "text"
+								},
+								{
+									"key": "stuAcademic",
+									"value": "其他",
+									"description": "学院",
+									"type": "text"
+								},
+								{
+									"key": "stuMajor",
+									"value": "其他",
+									"description": "专业",
+									"type": "text"
+								},
+								{
+									"key": "stuClass",
+									"value": "class1",
+									"description": "班级",
+									"type": "text"
+								},
+								{
+									"key": "stuDorm",
+									"value": "",
+									"description": "宿舍，非必填",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/delete",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "有限制的添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_7",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "stuName",
+									"value": "学测7",
+									"description": "姓名",
+									"type": "text"
+								},
+								{
+									"key": "stuAcademic",
+									"value": "其他",
+									"description": "学院",
+									"type": "text"
+								},
+								{
+									"key": "stuMajor",
+									"value": "其他",
+									"description": "专业",
+									"type": "text"
+								},
+								{
+									"key": "stuClass",
+									"value": "class1",
+									"description": "班级",
+									"type": "text"
+								},
+								{
+									"key": "stuDorm",
+									"value": "",
+									"description": "宿舍，非必填",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/addLimited",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"addLimited"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "addStudentFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/addByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"addByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改宿舍 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_1",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "newDorm",
+									"value": "a1-101",
+									"description": "新宿舍号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/alterDorm",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"alterDorm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改宿舍 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "studentDormFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/alterDormByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"alterDormByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "转出学生 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_6",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "freeReason",
+									"value": "累了",
+									"description": "转出原因",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/setFree",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"setFree"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查看游离的学生 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/getFreeStuList",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"getFreeStuList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "收纳游离的学生 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "stuClass",
+									"value": "class2",
+									"description": "新班级（学院和专业信息会自动获取）",
+									"type": "text"
+								},
+								{
+									"key": "stuDorm",
+									"value": "y9-202",
+									"description": "新宿舍（非必填）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/takeFreeStuIn",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"takeFreeStuIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "下载",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/student/download",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"download"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "申诉",
+			"item": [
+				{
+					"name": "学生提交申诉 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "teamCode",
+									"value": "$2a$10$bcNsLsMrH9kAYJKqBzDWEecgXFmxWFiLvYpWgH/Xh8krKZZKtBAwu",
+									"description": "团队码",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "我不服",
+									"description": "申诉说明",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "person",
+									"description": "申诉类型person, team(后台写死person了)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/appealScore/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"appealScore",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员审核申诉 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "teamCode",
+									"value": "$2a$10$VlNCxCgnobXqhuSnmxRbiuH/v2mt6Gubk7J/znl2H9L.LppK4Nrka",
+									"description": "团队码",
+									"type": "text"
+								},
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号，type=person时忽略",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "person",
+									"description": "撤回类型（团队中所有人=team，仅个人=person）",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "pass",
+									"description": "审核结果（pass, ignore）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/appealScore/check",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"appealScore",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员获取所有申诉表 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/appealScore/getList",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"appealScore",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "申请加分（暂时废弃）",
+			"item": [
+				{
+					"name": "学生提交申请 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "picture",
+									"description": "佐证文件",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "detailName",
+									"value": "很牛逼",
+									"description": "加减分细则",
+									"type": "text"
+								},
+								{
+									"key": "detailScore",
+									"value": "2",
+									"description": "分数",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "nm",
+									"description": "备注",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/applyScore/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"applyScore",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员审核申请 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "applyId",
+									"value": "2",
+									"description": "申请表ID",
+									"type": "text"
+								},
+								{
+									"key": "result",
+									"value": "ignore",
+									"description": "审核结果（pass, ignore）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/applyScore/check",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"applyScore",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员获取所有申请表 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/applyScore/getList",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"applyScore",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "三个文明",
+			"item": [
+				{
+					"name": "获取所有的三个文明 ^",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/civil/getList",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"civil",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "下载",
+			"item": [
+				{
+					"name": "下载模板 ^",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/download/template/{templateType}",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"download",
+								"template",
+								"{templateType}"
+							]
+						},
+						"description": "可以下载的模板：\r\n\"alterStudentDorm\",\r\n\"alterStudentScore\",\r\n\"changeMajor\",\r\n\"setDormHeader\",\r\n\"setMonitor\",\r\n\"addStudent\",\r\n\"alterStudentScore\",\r\n\"studentScore\",\r\n\"scoreDetail\""
+					},
+					"response": []
+				},
+				{
+					"name": "下载数据",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/download/data/{dataType}/{date}",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"download",
+								"data",
+								"{dataType}",
+								"{date}"
+							]
+						},
+						"description": "dataType(数据类型)：\"studentScore\",\"scoreDetail\"。\ndate(文件日期)：使用yyyyMMdd格式，如20181231。"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "带班",
+			"item": [
+				{
+					"name": "更新带班表 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test4",
+									"description": "新的管辖者账号",
+									"type": "text"
+								},
+								{
+									"key": "academic",
+									"value": "其他",
+									"description": "学院",
+									"type": "text"
+								},
+								{
+									"key": "major",
+									"value": "其他",
+									"description": "专业",
+									"type": "text"
+								},
+								{
+									"key": "className",
+									"value": "class1",
+									"description": "班级名称",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/masterClass/update",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"masterClass",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新带班表 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/masterClass/updateByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"masterClass",
+								"updateByExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "班级",
+			"item": [
+				{
+					"name": "获取自己有权限管理的班级 ^",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/class/query",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"class",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "存在某个班级 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "className",
+									"value": "计算机1601",
+									"description": "班级",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/class/has",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"class",
+								"has"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过班级获取管理员 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "className",
+									"value": "class1",
+									"description": "班级",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/class/getMaster",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"class",
+								"getMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置班长 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_3",
+									"description": "学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/class/setMonitor",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"class",
+								"setMonitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置班长 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/class/setMonitorByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"class",
+								"setMonitorByExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "宿舍",
+			"item": [
+				{
+					"name": "获取自己有权限管辖的宿舍 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "",
+									"description": "管理员账号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/dorm/query",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"dorm",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过宿舍获取所有管理员 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "dorm",
+									"value": "Y9-101",
+									"description": "宿舍",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/dorm/getMaster",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"dorm",
+								"getMaster"
+							]
+						},
+						"description": "宿舍可能有多个管理员"
+					},
+					"response": []
+				},
+				{
+					"name": "设置舍长 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_3",
+									"description": "学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/dorm/setHeader",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"dorm",
+								"setHeader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置舍长 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/dorm/setHeaderByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"dorm",
+								"setHeaderByExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "加减分明细",
+			"item": [
+				{
+					"name": "查询 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/scoreDetail/query",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"scoreDetail",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号，type=person有效",
+									"type": "text"
+								},
+								{
+									"key": "stuDorm",
+									"value": "z1  -101",
+									"description": "宿舍号，type=dorm有效",
+									"type": "text"
+								},
+								{
+									"key": "stuAcademic",
+									"value": "其他",
+									"description": "学院，type=class有效",
+									"type": "text"
+								},
+								{
+									"key": "stuMajor",
+									"value": "其他",
+									"description": "专业，type=class有效",
+									"type": "text"
+								},
+								{
+									"key": "stuClass",
+									"value": "class1",
+									"description": "班级，type=class有效",
+									"type": "text"
+								},
+								{
+									"key": "detailCategory",
+									"value": "课堂文明",
+									"description": "文明类型：课堂文明、宿舍文明、网络文明",
+									"type": "text"
+								},
+								{
+									"key": "detailName",
+									"value": "睡觉",
+									"description": "加减分原因",
+									"type": "text"
+								},
+								{
+									"key": "score",
+									"value": "-3",
+									"description": "分值",
+									"type": "text"
+								},
+								{
+									"key": "scoreForHeader",
+									"value": "-6",
+									"description": "班长/舍长的分值，如果type=person，则该项会被忽略",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "",
+									"description": "备注",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "dorm",
+									"description": "三种更改分数的方式：person, dorm, class",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"description": "可以是多个",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "files",
+									"description": "可以是多个",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/scoreDetail/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"scoreDetail",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/scoreDetail/addByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"scoreDetail",
+								"addByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "撤回 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号(type=group时忽略)",
+									"type": "text"
+								},
+								{
+									"key": "teamCode",
+									"value": "$2a$10$UYbFPviWu/YY26nu39ThdOOjMZy.U1chCwId3X7juOQqYoxULheY2",
+									"description": "团队码",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "person",
+									"description": "撤回方式：整个团队(team)，仅个人(person)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/scoreDetail/revoke",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"scoreDetail",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "下载",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/scoreDetail/download?masAccount=&category=all&startTime=2018-11-02 23:04:00&endTime=2018-11-29 14:05:31",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"scoreDetail",
+								"download"
+							],
+							"query": [
+								{
+									"key": "masAccount",
+									"value": "",
+									"description": "下载此人的操作记录（为空时代表获取所有人）"
+								},
+								{
+									"key": "category",
+									"value": "all",
+									"description": "class, dorm, net, all"
+								},
+								{
+									"key": "startTime",
+									"value": "2018-11-02 23:04:00",
+									"description": "开始时间"
+								},
+								{
+									"key": "endTime",
+									"value": "2018-11-29 14:05:31",
+									"description": "结束时间"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fun",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qincangxia.tomczm.cn/scoreDetail/fun",
+							"protocol": "http",
+							"host": [
+								"api",
+								"qincangxia",
+								"tomczm",
+								"cn"
+							],
+							"path": [
+								"scoreDetail",
+								"fun"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "系统",
+			"item": [
+				{
+					"name": "开启新学期",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "",
+									"description": "开启新学期的密码",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/system/setNewTerm",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"system",
+								"setNewTerm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "权限",
+			"item": [
+				{
+					"name": "开启",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "jurName",
+									"value": "appealScore.add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/jurisdiction/open",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"jurisdiction",
+								"open"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "关闭",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "jurName",
+									"value": "appealScore.add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/jurisdiction/close",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"jurisdiction",
+								"close"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取所有权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/jurisdiction/getList",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"jurisdiction",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取某管理员所有权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/jurisdiction/getByMaster",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"jurisdiction",
+								"getByMaster"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "权限与管理员组映射",
+			"item": [
+				{
+					"name": "授予权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "root",
+									"description": "管理员组",
+									"type": "text"
+								},
+								{
+									"key": "jurName",
+									"value": "menuGroup.add",
+									"description": "权限",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/jurisdictionGroup/grant",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"jurisdictionGroup",
+								"grant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "收回权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "root",
+									"description": "管理员组",
+									"type": "text"
+								},
+								{
+									"key": "jurName",
+									"value": "menuGroup.add",
+									"description": "权限",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/jurisdictionGroup/revoke",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"jurisdictionGroup",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员与组映射",
+			"item": [
+				{
+					"name": "添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"description": "管理员账号",
+									"type": "text"
+								},
+								{
+									"key": "gName",
+									"value": "instructor",
+									"description": "组名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/masterGroup/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"masterGroup",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"description": "管理员账号",
+									"type": "text"
+								},
+								{
+									"key": "gName",
+									"value": "instructor",
+									"description": "组名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/masterGroup/delete",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"masterGroup",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员组",
+			"item": [
+				{
+					"name": "添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "test",
+									"description": "管理员组名称",
+									"type": "text"
+								},
+								{
+									"key": "gState",
+									"value": "测试",
+									"description": "说明",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/groups/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"groups",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "test",
+									"description": "管理员组名称",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/groups/delete",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"groups",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "菜单",
+			"item": [
+				{
+					"name": "显示菜单",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mName",
+									"value": "data.out",
+									"description": "菜单名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/menu/visualise",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"visualise"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "隐藏菜单",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mName",
+									"value": "data.out",
+									"description": "菜单名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/menu/hidden",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"hidden"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查看某个管理员的菜单",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/menu/getByMaster",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"getByMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取所有菜单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/menu/getList",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "菜单与管理员组映射",
+			"item": [
+				{
+					"name": "添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mName",
+									"value": "1",
+									"description": "菜单名",
+									"type": "text"
+								},
+								{
+									"key": "gName",
+									"value": "root",
+									"description": "管理员组名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/menuGroup/add",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"menuGroup",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mName",
+									"value": "1",
+									"description": "菜单名",
+									"type": "text"
+								},
+								{
+									"key": "gName",
+									"value": "root",
+									"description": "管理员组名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/menuGroup/delete",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"menuGroup",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "状态",
+			"item": [
+				{
+					"name": "添加学生",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/status/addStudent",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"status",
+								"addStudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更改宿舍",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/status/alterDorm",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"status",
+								"alterDorm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置班长",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/status/setMonitor",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"status",
+								"setMonitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置舍长",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/status/setDormHeader",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"status",
+								"setDormHeader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加学生加减分记录",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.qcx.tomczm.cn:8080/status/addScoreDetail",
+							"protocol": "http",
+							"host": [
+								"api.qcx.tomczm.cn"
+							],
+							"port": "8080",
+							"path": [
+								"status",
+								"addScoreDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

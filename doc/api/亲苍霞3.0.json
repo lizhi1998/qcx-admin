@@ -1,0 +1,2310 @@
+{
+	"info": {
+		"_postman_id": "dfe928a3-ec14-487e-a5cb-8e8e5de0876f",
+		"name": "亲苍霞3.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "账户",
+			"item": [
+				{
+					"name": "登录 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "root",
+									"description": "账户",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "789456123",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/user/login",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "返回值为身份"
+					},
+					"response": []
+				},
+				{
+					"name": "注销 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/user/logout",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"user",
+								"logout"
+							]
+						},
+						"description": "返回值为身份"
+					},
+					"response": []
+				},
+				{
+					"name": "获取身份信息 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/user/getInfo",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"user",
+								"getInfo"
+							]
+						},
+						"description": "返回值为身份"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员",
+			"item": [
+				{
+					"name": "添加 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test4",
+									"description": "账号",
+									"type": "text"
+								},
+								{
+									"key": "masName",
+									"value": "测试4",
+									"description": "姓名",
+									"type": "text"
+								},
+								{
+									"key": "masInstitution",
+									"value": "管理学院",
+									"description": "机构（学院名/校级）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/master/add",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"master",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "addMasterFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/master/addByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"master",
+								"addByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test3",
+									"description": "被删除的管理员账号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/master/delete",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"master",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改密码 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"description": "账号",
+									"type": "text"
+								},
+								{
+									"key": "oldPassword",
+									"value": "123456789",
+									"description": "原密码",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "123456",
+									"description": "新密码",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/master/alterPassword",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"master",
+								"alterPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "queryString",
+									"value": "管理学院",
+									"description": "查询内容",
+									"type": "text"
+								},
+								{
+									"key": "queryType",
+									"value": "masInstitution",
+									"description": "查询方式，masAccount, masName, masInstitution, all",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/master/query",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"master",
+								"query"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "学生",
+			"item": [
+				{
+					"name": "重置密码 **",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "",
+									"description": "重置密码的学生学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/resetPassword",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "queryString",
+									"value": "stu_test_1",
+									"description": "查询的内容",
+									"type": "text"
+								},
+								{
+									"key": "queryType",
+									"value": "stuId",
+									"description": "查询的类型(stuId, stuName, stuDorm, stuClass)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/query",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_2",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "stuName",
+									"value": "学测2",
+									"description": "姓名",
+									"type": "text"
+								},
+								{
+									"key": "stuAcademic",
+									"value": "其他",
+									"description": "学院",
+									"type": "text"
+								},
+								{
+									"key": "stuMajor",
+									"value": "其他",
+									"description": "专业",
+									"type": "text"
+								},
+								{
+									"key": "stuClass",
+									"value": "class1",
+									"description": "班级",
+									"type": "text"
+								},
+								{
+									"key": "stuDorm",
+									"value": "",
+									"description": "宿舍，非必填",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/add",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "addStudentFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/addByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"addByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改宿舍 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_1",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "newDorm",
+									"value": "a1-101",
+									"description": "新宿舍号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/alterDorm",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"alterDorm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改宿舍 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "studentDormFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/alterDormByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"alterDormByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "转出学生 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_1",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "freeReason",
+									"value": "累了",
+									"description": "转出原因",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/setFree",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"setFree"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查看游离的学生 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_1",
+									"description": "查询的学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/getFreeStu",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"getFreeStu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "收纳游离的学生 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_1",
+									"description": "学号",
+									"type": "text"
+								},
+								{
+									"key": "stuClass",
+									"value": "class2",
+									"description": "新班级（学院和专业信息会自动获取）",
+									"type": "text"
+								},
+								{
+									"key": "stuDorm",
+									"value": "y9-202",
+									"description": "新宿舍（非必填）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/student/takeFreeStuIn",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"student",
+								"takeFreeStuIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "申诉（重做完成）",
+			"item": [
+				{
+					"name": "学生提交申诉 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "teamCode",
+									"value": "$2a$10$bcNsLsMrH9kAYJKqBzDWEecgXFmxWFiLvYpWgH/Xh8krKZZKtBAwu",
+									"description": "团队码",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "我不服",
+									"description": "申诉说明",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "person",
+									"description": "申诉类型person, team(后台写死person了)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/appealScore/add",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"appealScore",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员审核申诉 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "teamCode",
+									"value": "$2a$10$bcNsLsMrH9kAYJKqBzDWEecgXFmxWFiLvYpWgH/Xh8krKZZKtBAwu",
+									"description": "团队码",
+									"type": "text"
+								},
+								{
+									"key": "stuId",
+									"value": "stu_test_3",
+									"description": "学号，type=person时忽略",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "person",
+									"description": "撤回类型（团队中所有人=team，仅个人=person）",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "pass",
+									"description": "审核结果（pass, ignore）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/appealScore/check",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"appealScore",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员获取所有申诉表 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/appealScore/getList",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"appealScore",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "申请加分（重做中）",
+			"item": [
+				{
+					"name": "学生提交申请 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "picture",
+									"description": "佐证文件",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "detailName",
+									"value": "很牛逼",
+									"description": "加减分细则",
+									"type": "text"
+								},
+								{
+									"key": "detailScore",
+									"value": "2",
+									"description": "分数",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "nm",
+									"description": "备注",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/applyScore/add",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"applyScore",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员审核申请 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "applyId",
+									"value": "2",
+									"description": "申请表ID",
+									"type": "text"
+								},
+								{
+									"key": "result",
+									"value": "ignore",
+									"description": "审核结果（pass, ignore）",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/applyScore/check",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"applyScore",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员获取所有申请表 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/applyScore/getList",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"applyScore",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "三个文明",
+			"item": [
+				{
+					"name": "获取所有的三个文明 ^",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/civil/getList",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"civil",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "下载",
+			"item": [
+				{
+					"name": "下载模板 ^",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/download/template/{templateType}",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"download",
+								"template",
+								"{templateType}"
+							]
+						},
+						"description": "可以下载的模板：\r\n\"alterStudentDorm\",\r\n\"alterStudentScore\",\r\n\"changeMajor\",\r\n\"setDormHeader\",\r\n\"setMonitor\",\r\n\"addStudent\",\r\n\"alterStudentScore\",\r\n\"studentScore\",\r\n\"scoreDetail\""
+					},
+					"response": []
+				},
+				{
+					"name": "下载数据",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/download/data/{dataType}/{date}",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"download",
+								"data",
+								"{dataType}",
+								"{date}"
+							]
+						},
+						"description": "dataType(数据类型)：\"studentScore\",\"scoreDetail\"。\ndate(文件日期)：使用yyyyMMdd格式，如20181231。"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "带班",
+			"item": [
+				{
+					"name": "更新带班表 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test4",
+									"description": "新的管辖者账号",
+									"type": "text"
+								},
+								{
+									"key": "className",
+									"value": "class1",
+									"description": "班级名称",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/masterClass/update",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"masterClass",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新带班表 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "updateMasterClassFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/masterClass/updateByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"masterClass",
+								"updateByExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "班级",
+			"item": [
+				{
+					"name": "获取自己有权限管理的班级 ^",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/class/query",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"class",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "存在某个班级 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "className",
+									"value": "计算机1601",
+									"description": "班级",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/class/has",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"class",
+								"has"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过班级获取管理员 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "className",
+									"value": "class1",
+									"description": "班级",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/class/getMaster",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"class",
+								"getMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置班长 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_3",
+									"description": "学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/class/setMonitor",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"class",
+								"setMonitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置班长 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "monitorHeader",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/class/setMonitorByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"class",
+								"setMonitorByExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "宿舍",
+			"item": [
+				{
+					"name": "获取自己有权限管辖的宿舍 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "",
+									"description": "管理员账号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/dorm/query",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"dorm",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过宿舍获取所有管理员 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "dorm",
+									"value": "Y9-101",
+									"description": "宿舍",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/dorm/getMaster",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"dorm",
+								"getMaster"
+							]
+						},
+						"description": "宿舍可能有多个管理员"
+					},
+					"response": []
+				},
+				{
+					"name": "设置舍长 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_3",
+									"description": "学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/dorm/setHeader",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"dorm",
+								"setHeader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置舍长 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "dormHeaderFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/dorm/setHeaderByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"dorm",
+								"setHeaderByExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "加减分明细（重做完成）",
+			"item": [
+				{
+					"name": "查询 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_1",
+									"description": "学号",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/scoreDetail/query",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"scoreDetail",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_1",
+									"description": "学号，通过type三选一",
+									"type": "text"
+								},
+								{
+									"key": "stuDorm",
+									"value": "y9  -101",
+									"description": "宿舍号，通过type三选一",
+									"type": "text"
+								},
+								{
+									"key": "stuClass",
+									"value": "class1",
+									"description": "班级，通过type三选一",
+									"type": "text"
+								},
+								{
+									"key": "detailCategory",
+									"value": "课堂文明",
+									"description": "文明类型：课堂文明、宿舍文明、网络文明",
+									"type": "text"
+								},
+								{
+									"key": "detailName",
+									"value": "睡觉",
+									"description": "加减分原因",
+									"type": "text"
+								},
+								{
+									"key": "happenDate",
+									"value": "2018-10-11",
+									"description": "发生日期，以yyyy-MM-dd的格式发送",
+									"type": "text"
+								},
+								{
+									"key": "score",
+									"value": "-3",
+									"description": "分值",
+									"type": "text"
+								},
+								{
+									"key": "scoreForHeader",
+									"value": "-6",
+									"description": "班长/舍长的分值，如果type=person，则该项会被忽略",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "",
+									"description": "备注",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "dorm",
+									"description": "三种更改分数的方式：person, dorm, class",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/scoreDetail/add",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"scoreDetail",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加 - Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scoreDetailFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/scoreDetail/addByExcel",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"scoreDetail",
+								"addByExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "撤回 ^",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "stuId",
+									"value": "stu_test_01",
+									"description": "学号(type=group时忽略)",
+									"type": "text"
+								},
+								{
+									"key": "teamCode",
+									"value": "$2a$10$wTjo8ky/lCTLcWlZpz7.6e8yk7f9ipboQPTdKDM3Tw/5.NbA6A7.O",
+									"description": "团队码",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "team",
+									"description": "撤回方式：整个团队(team)，仅个人(person)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/scoreDetail/revoke",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"scoreDetail",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "系统",
+			"item": [
+				{
+					"name": "开启新学期",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "",
+									"description": "开启新学期的密码",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/system/setNewTerm",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"system",
+								"setNewTerm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "权限",
+			"item": [
+				{
+					"name": "开启",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "jurName",
+									"value": "appealScore.add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/jurisdiction/open",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"jurisdiction",
+								"open"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "关闭",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "jurName",
+									"value": "appealScore.add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/jurisdiction/close",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"jurisdiction",
+								"close"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取所有权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/jurisdiction/getList",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"jurisdiction",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取某管理员所有权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "test4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/jurisdiction/getByMaster",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"jurisdiction",
+								"getByMaster"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "权限与管理员组映射",
+			"item": [
+				{
+					"name": "授予权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "root",
+									"description": "管理员组",
+									"type": "text"
+								},
+								{
+									"key": "jurName",
+									"value": "upload.picture",
+									"description": "权限",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/jurisdictionGroup/grant",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"jurisdictionGroup",
+								"grant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "收回权限",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "root",
+									"description": "管理员组",
+									"type": "text"
+								},
+								{
+									"key": "jurName",
+									"value": "upload.picture",
+									"description": "权限",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/jurisdictionGroup/revoke",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"jurisdictionGroup",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员与组映射",
+			"item": [
+				{
+					"name": "添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"description": "管理员账号",
+									"type": "text"
+								},
+								{
+									"key": "gName",
+									"value": "instructor",
+									"description": "组名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/masterGroup/add",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"masterGroup",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"description": "管理员账号",
+									"type": "text"
+								},
+								{
+									"key": "gName",
+									"value": "instructor",
+									"description": "组名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/masterGroup/delete",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"masterGroup",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "管理员组",
+			"item": [
+				{
+					"name": "添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "test",
+									"description": "管理员组名称",
+									"type": "text"
+								},
+								{
+									"key": "gState",
+									"value": "测试",
+									"description": "说明",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/groups/add",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"groups",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gName",
+									"value": "test",
+									"description": "管理员组名称",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/groups/delete",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"groups",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "菜单",
+			"item": [
+				{
+					"name": "显示菜单",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mName",
+									"value": "data.out",
+									"description": "菜单名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/menu/visualise",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"menu",
+								"visualise"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "隐藏菜单",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mName",
+									"value": "data.out",
+									"description": "菜单名",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/menu/hidden",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"menu",
+								"hidden"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查看某个管理员的菜单（请勿使用）",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "masAccount",
+									"value": "root",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/menu/getByMaster",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"menu",
+								"getByMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取所有菜单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://qcxapi.fjut.edu.cn/menu/getList",
+							"protocol": "http",
+							"host": [
+								"api.qincangxia.tomczm.cn"
+							],
+							"port": "80",
+							"path": [
+								"menu",
+								"getList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
